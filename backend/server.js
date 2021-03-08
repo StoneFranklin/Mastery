@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config({path: '../.env'});
 const express = require('express');
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
@@ -30,7 +30,7 @@ app.use(cors({
     credentials: true
 }));
 
-mongoose.connect('mongodb+srv://StoneFranklin:pdskqpI3D6hihX@N*4yK@cluster0.ybbo1.mongodb.net/mastery?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGO, {
     useCreateIndex: true,
     useFindAndModify: false,
     useNewUrlParser: true,
