@@ -147,7 +147,7 @@ function Skills(props) {
     const classes = useStyles();
         
     if(!loggedIn) {
-        return <Redirect to="/login" />;
+        return <Redirect to="/" />;
     }
 
     const handleOpen = () => {

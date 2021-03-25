@@ -79,7 +79,7 @@ app.get('/auth/google', passport.authenticate('google', { scope: ['profile'] }))
 
 app.get('/auth/google/callback', passport.authenticate('google', 
     { 
-        failureRedirect: `${process.env.FRONT_END_URL}/login`, 
+        failureRedirect: `${process.env.FRONT_END_URL}/`, 
         successRedirect: `${process.env.FRONT_END_URL}/skills` 
     })
 );

@@ -55,7 +55,7 @@ function Navbar(props) {
   }
 
   if(logoutClicked) {
-    return <Redirect to="/login" />;
+    return <Redirect to="/" />;
   }
 
   return (
